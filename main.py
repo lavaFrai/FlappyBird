@@ -24,7 +24,8 @@ class Game:
         self.score = 0
         self.columns = None
         self.average_fps_list = [0 for _ in range(10)]
-        self.screen = pygame.display.set_mode(self.Consts.displayMode)
+        flags = pygame.DOUBLEBUF
+        self.screen = pygame.display.set_mode(self.Consts.displayMode, flags, vsync=1)
         self.running = True
         self.clock = pygame.time.Clock()
         self.fps = 60
