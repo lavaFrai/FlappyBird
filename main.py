@@ -1,5 +1,4 @@
 import pygame
-import pymunk
 from pygame.math import Vector2
 
 
@@ -30,9 +29,6 @@ class Game:
         self.clock = pygame.time.Clock()
         self.fps = 60
         self.game_objects = []
-        self.space = pymunk.Space()
-        self.space.gravity = (0, 981)
-        self.create_boundaries()
 
     def average_fps(self, fps):
         self.average_fps_list.append(fps)
